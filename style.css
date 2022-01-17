@@ -1,0 +1,73 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-lighter: hsl(0, 0%, 95%);
+    --bg-darker: hsl(0, 0%, 35%);
+    --bg-dark: hsl(0, 0%, 15%);
+    --bg-light: hsl(0, 0%, 100%);
+}
+
+html {
+    font-size: 20px;
+    font-family: Outfit;
+    color: var(--bg-dark);
+}
+
+body {
+    margin: 0 auto;
+    width: min(100%, 600px);
+}
+
+header {
+    text-align: center;
+}
+
+#quotes blockquote {
+    background: var(--bg-lighter);
+    padding: 0.25rem;
+    margin: 0;
+    position: relative;
+}
+
+#quotes {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#quotes blockquote::before {
+    content: "»";
+    color: var(--bg-darker);
+    line-height: 0;
+    font-size: 2.5rem;
+    position: absolute;
+    top: -0.35rem;
+    left: -0.5rem;
+}
+
+#quotes figcaption p {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 200;
+    font-style: italic;
+    letter-spacing: 0.025rem;
+    color: var(--bg-light);
+    background: var(--bg-darker);
+    padding: 0.25rem;
+}
+
+#quotes figcaption p::before {
+    content: "– ";
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
